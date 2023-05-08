@@ -3,11 +3,13 @@ import {SongService} from "./song.service"
 
 @Controller('song')
 export class SongController{
-    constructor(private readonly  songService: SongService)
+    constructor(private readonly  songService: SongService){}
 
     @Post()
-    create(@Body( createSongDto: createSongDto) {
+    create(@Body() createSongDto: createSongDto) {
         return this.songService.create( createSongDto)
-    })
+    }
+
+    @Get()
 }
 

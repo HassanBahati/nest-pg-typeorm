@@ -23,7 +23,7 @@ const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
       username: PGUSER,
       password: PGPASSWORD,
       database: PGDATABASE,
-      entities: ['dist/**/*.entity{.ts, .js'],
+      // entities: ['dist/**/*.entity{.ts, .js'],
 
       // url: `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?options=project%3D${ENDPOINT_ID}`,
 
