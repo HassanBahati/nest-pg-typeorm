@@ -2,7 +2,7 @@ import { Field, ObjectType } from '@nestjs/graphql';
 import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 @ObjectType()
-@Entity()
+@Entity({ name: 'employee' })
 export class Employee {
   @Field()
   @PrimaryGeneratedColumn('uuid')
@@ -17,7 +17,7 @@ export class Employee {
   @Column()
   last_name: string;
 
-  @Field({nullable: true})
-  @Column({nullable: true})
+  @Field({ nullable: true })
+  @Column({ nullable: true })
   city: string;
 }

@@ -23,15 +23,16 @@ const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
       username: PGUSER,
       password: PGPASSWORD,
       database: PGDATABASE,
+      synchronize: true,
       // entities: ['dist/**/*.entity{.ts, .js'],
 
       // url: `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?options=project%3D${ENDPOINT_ID}`,
 
       autoLoadEntities: true,
-      // ssl: true vs
-      ssl: {
-        rejectUnauthorized: true,
-      },
+      ssl: true,
+      // ssl: {
+      //   rejectUnauthorized: true,
+      // },
     }),
     EmployeeModule,
   ],
