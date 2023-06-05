@@ -12,19 +12,19 @@ export class ProjectService {
   ) {}
 
   create(project: CreateProjectInput) {
-    let proj = this.projectRepository.create(project)
-    return this.projectRepository.save(proj)
+    let proj = this.projectRepository.create(project);
+    return this.projectRepository.save(proj);
   }
 
-  async findAll() : Promise<Project[]>{
-    return this.projectRepository.find()
+  async findAll(): Promise<Project[]> {
+    return this.projectRepository.find();
   }
 
-  async findOne(id: string): Promise<Project>{
-    return this.projectRepository.findOne(id)
+  async findOne(id: string) {
+    return `This action find a #${id} project`;
   }
 
-  update(id:string, updateProjectInput: UpdateProjectInput) {
+  update(id: string, updateProjectInput: UpdateProjectInput) {
     return `This action updates a #${id} project`;
   }
 
